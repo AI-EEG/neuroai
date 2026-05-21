@@ -296,10 +296,23 @@ def _regen_code_builder_data(app):
     )
 
 
+def _regen_neuralfetch_explore_data(app):
+    """Regenerate neuralfetch/_explore_data.html from StudyInfo metadata."""
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(app.srcdir) / "scripts"))
+    try:
+        from build_study_explorer import build_docs_study_explorer  # type: ignore
+    finally:
+        sys.path.pop(0)
+    build_docs_study_explorer(Path(app.srcdir) / "neuralfetch" / "_explore_data.html")
+
+
 def setup(app):
     from sphinx.events import EventListener
 
     app.connect("builder-inited", _regen_code_builder_data)
+    app.connect("builder-inited", _regen_neuralfetch_explore_data)
     app.connect("missing-reference", _resolve_short_paths)
 
     listeners = app.events.listeners.get("autodoc-skip-member", [])

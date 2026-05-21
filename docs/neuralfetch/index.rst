@@ -464,7 +464,7 @@ Each study provides:
 Browse All Datasets
 -------------------
 
-Filter and sort all available datasets by modality, subjects, and hours:
+Explore declared ``StudyInfo`` metadata by recording volume and event coverage:
 
 .. raw:: html
 
