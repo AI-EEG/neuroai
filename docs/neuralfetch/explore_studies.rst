@@ -1,15 +1,15 @@
-Explore Brain Datasets
-======================
+Explore Studies
+===============
 
 Browse NeuralFetch studies from their declared ``StudyInfo`` metadata. The
 interactive explorer estimates recording volume, summarizes catalog coverage,
 and shows which event types each study exposes without downloading datasets.
 
 .. raw:: html
-   :file: _explore_data.html
+   :file: _explore_studies.html
 
-Download a Dataset
-------------------
+Download a Study
+----------------
 
 Pass any study name to ``ns.Study`` to download and load it:
 

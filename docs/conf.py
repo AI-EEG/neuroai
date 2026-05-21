@@ -10,6 +10,7 @@
 # as namespace packages and shadows the installed ones — front-load real repos.
 import builtins
 import importlib
+import importlib.util
 import os
 import sys
 import typing

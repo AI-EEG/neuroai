@@ -989,6 +989,6 @@ _JS = """
 if __name__ == "__main__":
     docs_root = Path(__file__).resolve().parents[1]
     report_path = build_docs_study_explorer(
-        docs_root / "neuralfetch" / "_explore_data.html"
+        docs_root / "neuralfetch" / "_explore_studies.html"
     )
     print(f"Saved HTML fragment to {report_path}")
